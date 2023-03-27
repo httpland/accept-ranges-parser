@@ -3,3 +3,4 @@
 
 export { parseAcceptRanges } from "./parse.ts";
 export type { AcceptRanges } from "./types.ts";
+export { type Token } from "./deps.ts";

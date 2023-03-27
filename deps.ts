@@ -60,4 +60,6 @@ export type TChar =
   | "~"
   | ALPHA
   | DIGIT;
+
+/** Representation of [`<token>`](https://www.rfc-editor.org/rfc/rfc9110#section-5.6.2-2). */
 export type Token = `${TChar}${string}`;
