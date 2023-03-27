@@ -29,13 +29,37 @@ assertEquals(parseAcceptRanges(`bytes, unknown`), ["bytes", "unknown"]);
 ### Throwing error
 
 Throws `SyntaxError` if the input is invalid
-[`<Accept-Ranges>`](https://www.rfc-editor.org/rfc/rfc9110#section-14.3-2).
+[`<Accept-Ranges>`](https://www.rfc-editor.org/rfc/rfc9110#section-14.3-2)
+syntax.
 
 ```ts
 import { parseAcceptRanges } from "https://deno.land/x/accept_ranges_parser@$VERSION/parse.ts";
 import { assertThrows } from "https://deno.land/std/testing/asserts.ts";
 
 assertThrows(() => parseAcceptRanges("<invalid>"));
+```
+
+## Serialization
+
+Serialize string of array into string.
+
+```ts
+import { stringifyAcceptRanges } from "https://deno.land/x/accept_ranges_parser@$VERSION/stringify.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+assertEquals(stringifyAcceptRanges(["bytes"]), "bytes");
+```
+
+### Throwing error
+
+Throws `TypeError` if the element contains invalid
+[`<range-unit>`](https://www.rfc-editor.org/rfc/rfc9110#section-14.1-3) syntax.
+
+```ts
+import { stringifyAcceptRanges } from "https://deno.land/x/accept_ranges_parser@$VERSION/stringify.ts";
+import { assertThrows } from "https://deno.land/std/testing/asserts.ts";
+
+assertThrows(() => stringifyAcceptRanges(["<invalid>", "none"]));
 ```
 
 ## AcceptRanges
