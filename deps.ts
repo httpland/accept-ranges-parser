@@ -1,6 +1,8 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
+export { isString } from "https://deno.land/x/isx@1.1.0/is_string.ts";
+
 // TODO:(miyauci) Packaging and externalization this module.
 
 export type UppercaseLetter =

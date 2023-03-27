@@ -36,4 +36,11 @@ export const makeOptions = (version: string): BuildOptions => ({
     publishConfig: { access: "public" },
   },
   packageManager: "pnpm",
+  mappings: {
+    "https://deno.land/x/isx@1.1.0/is_string.ts": {
+      name: "@miyauci/isx",
+      version: "1.1.0",
+      subPath: "is_string",
+    },
+  },
 });

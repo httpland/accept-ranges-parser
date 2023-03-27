@@ -3,4 +3,5 @@
 
 export const enum Msg {
   InvalidSyntax = "invalid <Accept-Ranges> syntax.",
+  InvalidRangeUnit = "invalid <range-unit> syntax.",
 }
