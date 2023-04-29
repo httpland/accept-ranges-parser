@@ -1,7 +1,7 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { isToken, parseListFields } from "./deps.ts";
+import { isNotEmpty, isToken, parseListFields } from "./deps.ts";
 import { Msg } from "./constants.ts";
 import type { AcceptRanges } from "./types.ts";
 
@@ -19,11 +19,12 @@ import type { AcceptRanges } from "./types.ts";
  */
 export function parseAcceptRanges(input: string): AcceptRanges {
   const acceptableRanges = parseListFields(input);
+  const msg = `${Msg.InvalidSyntax} "${input}"`;
+
+  if (!isNotEmpty(acceptableRanges)) throw new SyntaxError(msg);
 
   acceptableRanges.forEach((token) => {
-    if (!isToken(token)) {
-      throw SyntaxError(`${Msg.InvalidSyntax} "${input}"`);
-    }
+    if (!isToken(token)) throw new SyntaxError(msg);
   });
 
   return acceptableRanges as AcceptRanges;

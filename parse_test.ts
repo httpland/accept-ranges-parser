@@ -18,8 +18,6 @@ describe("parseAcceptRanges", () => {
       ",",
       ",,,",
       ", , ,",
-      "a,",
-      "a, , a",
       "あ",
       "a, あ",
       `""`,
@@ -38,6 +36,7 @@ describe("parseAcceptRanges", () => {
       [" abc ", ["abc"]],
       ["abc, def", ["abc", "def"]],
       ["bytes,none", ["bytes", "none"]],
+      ["bytes, ,,none", ["bytes", "none"]],
     ];
 
     table.forEach(([input, expected]) => {

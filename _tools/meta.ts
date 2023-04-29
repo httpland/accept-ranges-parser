@@ -37,10 +37,15 @@ export const makeOptions = (version: string): BuildOptions => ({
   },
   packageManager: "pnpm",
   mappings: {
-    "https://deno.land/x/isx@1.1.0/is_string.ts": {
+    "https://deno.land/x/isx@1.3.1/is_string.ts": {
       name: "@miyauci/isx",
-      version: "1.1.0",
-      subPath: "is_string",
+      version: "1.3.1",
+      subPath: "is_string.js",
+    },
+    "https://deno.land/x/isx@1.3.1/iterable/is_not_empty.ts": {
+      name: "@miyauci/isx",
+      version: "1.3.1",
+      subPath: "iterable/is_not_empty.js",
     },
     "https://deno.land/x/http_utils@1.2.0/token.ts": {
       name: "@httpland/http-utils",
