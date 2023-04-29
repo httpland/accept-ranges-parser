@@ -42,5 +42,15 @@ export const makeOptions = (version: string): BuildOptions => ({
       version: "1.1.0",
       subPath: "is_string",
     },
+    "https://deno.land/x/http_utils@1.2.0/token.ts": {
+      name: "@httpland/http-utils",
+      version: "1.2.0",
+      subPath: "token.js",
+    },
+    "https://deno.land/x/http_utils@1.2.0/list.ts": {
+      name: "@httpland/http-utils",
+      version: "1.2.0",
+      subPath: "list.js",
+    },
   },
 });

@@ -1,5 +1,4 @@
-import { isString } from "./deps.ts";
-import { isTokenFormat } from "./utils.ts";
+import { isString, isToken } from "./deps.ts";
 import { Msg } from "./constants.ts";
 
 /** Serialize string of array into string.
@@ -20,7 +19,7 @@ export function stringifyAcceptRanges(
   const targets = isString(acceptRanges) ? [acceptRanges] : acceptRanges;
 
   targets.forEach((rangeUnit) => {
-    if (!isTokenFormat(rangeUnit)) {
+    if (!isToken(rangeUnit)) {
       throw TypeError(`${Msg.InvalidRangeUnit} "${rangeUnit}"`);
     }
   });
