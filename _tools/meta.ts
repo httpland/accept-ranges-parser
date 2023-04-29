@@ -1,4 +1,4 @@
-import { BuildOptions } from "https://deno.land/x/dnt@0.33.1/mod.ts";
+import { BuildOptions } from "https://deno.land/x/dnt@0.34.0/mod.ts";
 
 export const makeOptions = (version: string): BuildOptions => ({
   test: false,
@@ -37,10 +37,25 @@ export const makeOptions = (version: string): BuildOptions => ({
   },
   packageManager: "pnpm",
   mappings: {
-    "https://deno.land/x/isx@1.1.0/is_string.ts": {
+    "https://deno.land/x/isx@1.3.1/is_string.ts": {
       name: "@miyauci/isx",
-      version: "1.1.0",
-      subPath: "is_string",
+      version: "1.3.1",
+      subPath: "is_string.js",
+    },
+    "https://deno.land/x/isx@1.3.1/iterable/is_not_empty.ts": {
+      name: "@miyauci/isx",
+      version: "1.3.1",
+      subPath: "iterable/is_not_empty.js",
+    },
+    "https://deno.land/x/http_utils@1.2.0/token.ts": {
+      name: "@httpland/http-utils",
+      version: "1.2.0",
+      subPath: "token.js",
+    },
+    "https://deno.land/x/http_utils@1.2.0/list.ts": {
+      name: "@httpland/http-utils",
+      version: "1.2.0",
+      subPath: "list.js",
     },
   },
 });

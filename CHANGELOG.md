@@ -1,3 +1,10 @@
+## [1.0.1-beta.1](https://github.com/httpland/accept-ranges-parser/compare/1.0.0...1.0.1-beta.1) (2023-04-29)
+
+
+### Bug Fixes
+
+* **parse:** accept list what includes empty element ([8dea1c5](https://github.com/httpland/accept-ranges-parser/commit/8dea1c5defe575b866ffb22b2a51cd468dbc00a3))
+
 # 1.0.0 (2023-03-27)
 
 
